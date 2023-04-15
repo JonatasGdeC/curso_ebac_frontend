@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color:beige;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.form__inputs{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.form__inputs input{
+    padding: 0.4em;
+}
+
+body button{
+    width: 100%;
+    margin: 2em 0;
+    padding: 0.5em;
+    font-weight: bolder;
+    background-color: aqua;
+    border: 1px solid rgb(2, 229, 229);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+body button:hover{
+    background-color: aquamarine;
+}
+
+#mensagem{
+    text-align: center;
+    color: white;
+    padding: 0.5em;
+    display: none;
+    border-radius: 8px;
+}
+
+@media (max-width: 940px){
+    .form__inputs{
+        flex-direction: column;
+    }
+}
