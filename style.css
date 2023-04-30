@@ -1,0 +1,21 @@
+.container{
+    margin-top: 70px;
+}
+
+label{
+    display: block;
+    padding-top: 5px;
+}
+
+input{
+    max-width: 50%;
+}
+
+span{
+    color: red;
+    font-style: italic;
+}
+
+button{
+    margin-top: 30px;
+}
