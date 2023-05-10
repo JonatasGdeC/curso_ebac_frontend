@@ -1,0 +1,94 @@
+@use 'config/reset';
+@use 'config/variaveis';
+
+body{
+    background-color: variaveis.$corBrancoPrincipal ;
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    max-width:1024px;
+    width:100%;
+    margin:0 auto;
+}
+
+header{
+    .container{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:16px 0;
+    }
+}
+
+.menu{
+    display: flex;
+    li{
+        font-weight:bold;
+        margin-left: 24px;
+
+        a{
+            color: variaveis.$corVerdeLink;
+            text-decoration: none;
+        }
+    }
+}
+
+section {
+    padding: 56px 0;
+}
+
+.products {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+
+    li{
+        img {
+        width: 100%;
+        border-radius: 16px;
+        }
+    }
+
+    a {
+        display: block;
+        background-color: variaveis.$corVerdeLink;
+        color: variaveis.$corBrancoSecundario;
+        text-align: center;
+        padding: 8px 0;
+        border-radius: 8px;
+        margin-top: 8px;
+        text-decoration: none;
+
+        &:hover{
+            background-color: #4cd137;
+        }
+    }
+}
+
+@media screen and (max-width: variaveis.$tablet) {
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: variaveis.$mobile) {
+    .products {
+        display: block;
+
+        li  {
+            margin-bottom: 32px;
+        }
+    }
+}
